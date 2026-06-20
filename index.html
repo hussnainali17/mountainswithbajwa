@@ -50,6 +50,7 @@
   .nav-social-icon {
     width: 36px; height: 36px; border-radius: 50%;
     display: flex; align-items: center; justify-content: center;
+    color: var(--white);
     transition: transform 0.2s, box-shadow 0.2s;
     text-decoration: none;
   }
@@ -66,7 +67,9 @@
     background: linear-gradient(135deg, #2d5a3d 0%, #5aaa6a 100%);
     border: 1px solid rgba(90,170,106,0.5);
   }
-  .nav-social-icon svg { width: 18px; height: 18px; }
+  .nav-social-icon svg { width: 18px; height: 18px; display: block; }
+  .nav-social-icon.instagram svg { fill: none; stroke: currentColor; }
+  .nav-social-icon.whatsapp svg, .nav-social-icon.phone svg { fill: currentColor; stroke: none; }
   .nav-cta {
     background: var(--moss); color: var(--white);
     border: none; padding: 10px 26px; border-radius: 4px;
@@ -474,6 +477,8 @@
     .wa-btn { width: 52px; height: 52px; }
     .modal-box { padding: 28px 20px; }
     .section-header { margin-bottom: 40px; }
+    .mobile-menu-social { display: none; }
+    .mobile-menu a[href^="tel:"] { display: none; }
   }
   @media (max-width: 400px) {
     .hero h1 { font-size: 48px; }
